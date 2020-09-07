@@ -47,7 +47,7 @@
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.AddressTxtBox = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.GoButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -154,7 +154,7 @@
             this.toolStripButton3,
             this.toolStripButton4,
             this.AddressTxtBox,
-            this.toolStripButton5,
+            this.GoButton,
             this.toolStripButton6});
             this.toolStrip1.Location = new System.Drawing.Point(0, 40);
             this.toolStrip1.Name = "toolStrip1";
@@ -202,15 +202,17 @@
             // 
             this.AddressTxtBox.Name = "AddressTxtBox";
             this.AddressTxtBox.Size = new System.Drawing.Size(100, 39);
+            this.AddressTxtBox.Click += new System.EventHandler(this.AddressTxtBox_Click);
             // 
-            // toolStripButton5
+            // GoButton
             // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(36, 36);
-            this.toolStripButton5.Text = "Go Button";
+            this.GoButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.GoButton.Image = ((System.Drawing.Image)(resources.GetObject("GoButton.Image")));
+            this.GoButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.GoButton.Name = "GoButton";
+            this.GoButton.Size = new System.Drawing.Size(36, 36);
+            this.GoButton.Text = "Go Button";
+            this.GoButton.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // toolStripButton6
             // 
@@ -260,7 +262,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripTextBox AddressTxtBox;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton GoButton;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
     }
 }

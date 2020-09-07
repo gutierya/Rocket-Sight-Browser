@@ -29,5 +29,18 @@ namespace WebBrowser.UI
         {
             this.Close();
         }
+
+        //Toolstrip Controls
+        //Address Bar
+        private void AddressTxtBox_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        //Go Button functionality
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
