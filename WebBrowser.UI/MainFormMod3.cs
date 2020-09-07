@@ -30,11 +30,9 @@ namespace WebBrowser.UI
             this.Close();
         }
 
-        //Toolstrip Controls
-        //Address Bar
         private void AddressTxtBox_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         //Go Button functionality
@@ -48,6 +46,23 @@ namespace WebBrowser.UI
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        //Toolstrip Controls
+        //Address Bar
+        private void AddressTxtBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                string url = AddressTxtBox.Text;
+
+                if (Uri.IsWellFormedUriString(url, UriKind.RelativeOrAbsolute))
+                {
+                    tabPage1.Text = url;
+                    webBrowser1.Navigate(url);
+                    MessageBox.Show("You pressed Enter");
+                }
+            }
         }
     }
 }

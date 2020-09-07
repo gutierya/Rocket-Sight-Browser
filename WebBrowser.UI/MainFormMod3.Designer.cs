@@ -50,8 +50,8 @@
             this.GoButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -207,6 +207,7 @@
             // 
             this.AddressTxtBox.Name = "AddressTxtBox";
             this.AddressTxtBox.Size = new System.Drawing.Size(100, 39);
+            this.AddressTxtBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddressTxtBox_KeyDown);
             this.AddressTxtBox.Click += new System.EventHandler(this.AddressTxtBox_Click);
             // 
             // GoButton
@@ -240,15 +241,6 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(0, 83);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(457, 89);
-            this.tabControl1.TabIndex = 2;
-            // 
             // webBrowser1
             // 
             this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -257,6 +249,15 @@
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.Size = new System.Drawing.Size(435, 36);
             this.webBrowser1.TabIndex = 0;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Location = new System.Drawing.Point(0, 83);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(457, 89);
+            this.tabControl1.TabIndex = 2;
             // 
             // MainFormMod3
             // 
