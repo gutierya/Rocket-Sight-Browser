@@ -40,7 +40,8 @@ namespace WebBrowser.UI
         //Go Button functionality
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-
+            string url = AddressTxtBox.Text;
+            webBrowser1.Navigate(url);
         }
 
         //tab control housing webBrowser control
