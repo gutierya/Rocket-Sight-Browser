@@ -16,5 +16,18 @@ namespace WebBrowser.UI
         {
             InitializeComponent();
         }
+
+        //Strip Menu item action
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This browser will be speedy, efficient and a great addition to your Computer!" +
+                "\n" + "Created by: Yamilet Gutierrez, ID#904104865");
+        }
+
+        //Strip Menu item action
+        private void exitWebBrowserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
