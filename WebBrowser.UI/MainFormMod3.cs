@@ -42,5 +42,11 @@ namespace WebBrowser.UI
         {
 
         }
+
+        //tab control housing webBrowser control
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
