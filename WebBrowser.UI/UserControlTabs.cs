@@ -29,12 +29,13 @@ namespace WebBrowser.UI
         private void userBackBtn_Click(object sender, EventArgs e)
         {
             //pushing current link to top of fwd stack
-            fwdLink.Push(userAddyTextBox.Text);
+            fwdLink.Push(url);
             String url = userAddyTextBox.Text;
-            backLink.Push(url);
 
             //navigate url
-            userCtrlWebBrowser.Navigate(url);
+            String backNextUrl = backLink.Pop();
+            userCtrlWebBrowser.Navigate(nextUrl);
+            userAddyTextBox.Text = backNextUrl;
         }
 
         //BackLinks Field - stack of strings
@@ -47,16 +48,15 @@ namespace WebBrowser.UI
         //Toolstip forward button
         private void userFwdBtn_Click(object sender, EventArgs e)
         {
-            foreach (var addy in fwdLink)
-            {
+
                 //pushing current link to top of back stack
-                backLink.Push(userAddyTextBox.Text);
+                backLink.Push(url);
                 String url = userAddyTextBox.Text;
-                fwdLink.Pop();
+                string fwdNextUrl = fwdLink.Pop();
 
                 //navigate url
-                userCtrlWebBrowser.Navigate(url);
-            }
+                userCtrlWebBrowser.Navigate(fwdNextUrl);
+                userAddyTextBox.Text = fwdNextUrl;
         }
 
         //FwdLinks Field - stack of strings
@@ -71,7 +71,7 @@ namespace WebBrowser.UI
         //Toolstip refresh button
         private void userRefreshBtn_Click(object sender, EventArgs e)
         {
-
+            userCtrlWebBrowser.Refresh();
         }
 
         //Toolstip Home button - functionality to be added
@@ -90,7 +90,11 @@ namespace WebBrowser.UI
         private void userGoBtn_Click(object sender, EventArgs e)
         {
             String url = userAddyTextBox.Text;
+            userCtrlWebBrowser.Navigate(url);
+
+            //links pushed 
             backLink.Push(url);
+            fwdLink.Push(url);
         }
 
         //Webbrowser usercontrol
@@ -111,8 +115,18 @@ namespace WebBrowser.UI
                     userAddyTextBox.Text = url;
                     userCtrlWebBrowser.Navigate(url);
                     userCtrlWebBrowser.ScriptErrorsSuppressed = true;
+
+                    //links pushed 
+                    backLink.Push(url);
+                    fwdLink.Push(url);
                 }
             }
+        }
+
+        //bookmark button - no functionality for now
+        private void userBookmarkBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

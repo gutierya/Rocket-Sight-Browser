@@ -38,6 +38,7 @@
             this.userGoBtn = new System.Windows.Forms.ToolStripButton();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.userCtrlWebBrowser = new System.Windows.Forms.WebBrowser();
+            this.userBookmarkBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripUserCtrl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,8 @@
             this.userRefreshBtn,
             this.userHomeBtn,
             this.userAddyTextBox,
-            this.userGoBtn});
+            this.userGoBtn,
+            this.userBookmarkBtn});
             this.toolStripUserCtrl.Location = new System.Drawing.Point(0, 0);
             this.toolStripUserCtrl.Name = "toolStripUserCtrl";
             this.toolStripUserCtrl.Size = new System.Drawing.Size(1708, 39);
@@ -133,6 +135,16 @@
             this.userCtrlWebBrowser.TabIndex = 2;
             this.userCtrlWebBrowser.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser2_DocumentCompleted);
             // 
+            // userBookmarkBtn
+            // 
+            this.userBookmarkBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.userBookmarkBtn.Image = ((System.Drawing.Image)(resources.GetObject("userBookmarkBtn.Image")));
+            this.userBookmarkBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.userBookmarkBtn.Name = "userBookmarkBtn";
+            this.userBookmarkBtn.Size = new System.Drawing.Size(36, 36);
+            this.userBookmarkBtn.Text = "toolStripButton1";
+            this.userBookmarkBtn.Click += new System.EventHandler(this.userBookmarkBtn_Click);
+            // 
             // UserControlTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -161,5 +173,6 @@
         private System.Windows.Forms.ToolStripButton userGoBtn;
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.WebBrowser userCtrlWebBrowser;
+        private System.Windows.Forms.ToolStripButton userBookmarkBtn;
     }
 }

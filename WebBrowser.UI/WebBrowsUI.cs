@@ -70,5 +70,20 @@ namespace WebBrowser.UI
         {
 
         }
+
+        //File Tab - new tab opens when clicked
+        private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String click = "TabPage " + (tabControl1.TabCount + 1).ToString();
+            TabPage theTabPg = new TabPage(click);
+            tabControl1.TabPages.Add(click);
+        }
+
+        //File Tab - close tab when clicked
+        private void closeCurrentTabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabControl1.TabPages.Remove(tabControl1.SelectedTab);
+            tabControl1.TabPages.Clear();
+        }
     }
 }
