@@ -36,6 +36,8 @@
             this.userHomeBtn = new System.Windows.Forms.ToolStripButton();
             this.userAddyTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.userGoBtn = new System.Windows.Forms.ToolStripButton();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.webBrowser2 = new System.Windows.Forms.WebBrowser();
             this.toolStripUserCtrl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,10 +113,31 @@
             this.userGoBtn.Text = "toolStripButton1";
             this.userGoBtn.Click += new System.EventHandler(this.userGoBtn_Click);
             // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(0, 39);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(1708, 563);
+            this.webBrowser1.TabIndex = 1;
+            // 
+            // webBrowser2
+            // 
+            this.webBrowser2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser2.Location = new System.Drawing.Point(0, 39);
+            this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser2.Name = "webBrowser2";
+            this.webBrowser2.Size = new System.Drawing.Size(1708, 563);
+            this.webBrowser2.TabIndex = 2;
+            this.webBrowser2.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser2_DocumentCompleted);
+            // 
             // UserControlTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.webBrowser2);
+            this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.toolStripUserCtrl);
             this.Name = "UserControlTabs";
             this.Size = new System.Drawing.Size(1708, 602);
@@ -135,5 +158,7 @@
         private System.Windows.Forms.ToolStripButton userHomeBtn;
         private System.Windows.Forms.ToolStripTextBox userAddyTextBox;
         private System.Windows.Forms.ToolStripButton userGoBtn;
+        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.WebBrowser webBrowser2;
     }
 }

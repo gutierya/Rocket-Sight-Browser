@@ -60,5 +60,11 @@ namespace WebBrowser.UI
         {
 
         }
+
+        //Webbrowser usercontrol
+        private void webBrowser2_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
     }
 }
