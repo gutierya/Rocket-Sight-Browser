@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserControlTabs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlTabs.Designer.cs">
+      <DependentUpon>UserControlTabs.cs</DependentUpon>
+    </Compile>
     <Compile Include="WebBrowsUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UserControlTabs.resx">
+      <DependentUpon>UserControlTabs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WebBrowsUI.resx">
       <DependentUpon>WebBrowsUI.cs</DependentUpon>
     </EmbeddedResource>
