@@ -43,7 +43,9 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.userControlTabs1 = new WebBrowser.UI.UserControlTabs();
             this.menuStrip1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -141,6 +143,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.userControlTabs1);
             this.tabPage1.Location = new System.Drawing.Point(8, 39);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -159,6 +162,13 @@
             this.tabControl1.Size = new System.Drawing.Size(2024, 931);
             this.tabControl1.TabIndex = 2;
             // 
+            // userControlTabs1
+            // 
+            this.userControlTabs1.Location = new System.Drawing.Point(6, 3);
+            this.userControlTabs1.Name = "userControlTabs1";
+            this.userControlTabs1.Size = new System.Drawing.Size(2002, 881);
+            this.userControlTabs1.TabIndex = 0;
+            // 
             // WebBrowsUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -171,6 +181,7 @@
             this.Text = "MainFormMod3";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -194,5 +205,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private UserControlTabs userControlTabs1;
     }
 }

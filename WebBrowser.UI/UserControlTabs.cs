@@ -74,7 +74,7 @@ namespace WebBrowser.UI
 
         }
 
-        //Toolstip Home button - to be added
+        //Toolstip Home button - functionality to be added
         private void userHomeBtn_Click(object sender, EventArgs e)
         {
 
