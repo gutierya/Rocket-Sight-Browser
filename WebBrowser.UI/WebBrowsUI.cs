@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WebBrowser.UI
 {
-    public partial class MainFormMod3 : Form
+    public partial class WebBrowsUI : Form
     {
-        public MainFormMod3()
+        public WebBrowsUI()
         {
             InitializeComponent();
         }
@@ -63,6 +63,11 @@ namespace WebBrowser.UI
                     MessageBox.Show("You pressed Enter");
                 }
             }
+        }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
         }
     }
 }
