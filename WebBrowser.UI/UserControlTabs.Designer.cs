@@ -28,19 +28,112 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlTabs));
+            this.toolStripUserCtrl = new System.Windows.Forms.ToolStrip();
+            this.userBackBtn = new System.Windows.Forms.ToolStripButton();
+            this.userFwdBtn = new System.Windows.Forms.ToolStripButton();
+            this.userRefreshBtn = new System.Windows.Forms.ToolStripButton();
+            this.userHomeBtn = new System.Windows.Forms.ToolStripButton();
+            this.userAddyTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.userGoBtn = new System.Windows.Forms.ToolStripButton();
+            this.toolStripUserCtrl.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // toolStripUserCtrl
+            // 
+            this.toolStripUserCtrl.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.toolStripUserCtrl.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.userBackBtn,
+            this.userFwdBtn,
+            this.userRefreshBtn,
+            this.userHomeBtn,
+            this.userAddyTextBox,
+            this.userGoBtn});
+            this.toolStripUserCtrl.Location = new System.Drawing.Point(0, 0);
+            this.toolStripUserCtrl.Name = "toolStripUserCtrl";
+            this.toolStripUserCtrl.Size = new System.Drawing.Size(1708, 39);
+            this.toolStripUserCtrl.TabIndex = 0;
+            this.toolStripUserCtrl.Text = "toolStrip1";
+            // 
+            // userBackBtn
+            // 
+            this.userBackBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.userBackBtn.Image = ((System.Drawing.Image)(resources.GetObject("userBackBtn.Image")));
+            this.userBackBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.userBackBtn.Name = "userBackBtn";
+            this.userBackBtn.Size = new System.Drawing.Size(36, 36);
+            this.userBackBtn.Text = "toolStripButton1";
+            this.userBackBtn.Click += new System.EventHandler(this.userBackBtn_Click);
+            // 
+            // userFwdBtn
+            // 
+            this.userFwdBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.userFwdBtn.Image = ((System.Drawing.Image)(resources.GetObject("userFwdBtn.Image")));
+            this.userFwdBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.userFwdBtn.Name = "userFwdBtn";
+            this.userFwdBtn.Size = new System.Drawing.Size(36, 36);
+            this.userFwdBtn.Text = "toolStripButton2";
+            this.userFwdBtn.Click += new System.EventHandler(this.userFwdBtn_Click);
+            // 
+            // userRefreshBtn
+            // 
+            this.userRefreshBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.userRefreshBtn.Image = ((System.Drawing.Image)(resources.GetObject("userRefreshBtn.Image")));
+            this.userRefreshBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.userRefreshBtn.Name = "userRefreshBtn";
+            this.userRefreshBtn.Size = new System.Drawing.Size(36, 36);
+            this.userRefreshBtn.Text = "toolStripButton3";
+            this.userRefreshBtn.Click += new System.EventHandler(this.userRefreshBtn_Click);
+            // 
+            // userHomeBtn
+            // 
+            this.userHomeBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.userHomeBtn.Image = ((System.Drawing.Image)(resources.GetObject("userHomeBtn.Image")));
+            this.userHomeBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.userHomeBtn.Name = "userHomeBtn";
+            this.userHomeBtn.Size = new System.Drawing.Size(36, 36);
+            this.userHomeBtn.Text = "toolStripButton1";
+            this.userHomeBtn.Click += new System.EventHandler(this.userHomeBtn_Click);
+            // 
+            // userAddyTextBox
+            // 
+            this.userAddyTextBox.Name = "userAddyTextBox";
+            this.userAddyTextBox.Size = new System.Drawing.Size(600, 39);
+            this.userAddyTextBox.Click += new System.EventHandler(this.userAddyTextBox_Click);
+            // 
+            // userGoBtn
+            // 
+            this.userGoBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.userGoBtn.Image = ((System.Drawing.Image)(resources.GetObject("userGoBtn.Image")));
+            this.userGoBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.userGoBtn.Name = "userGoBtn";
+            this.userGoBtn.Size = new System.Drawing.Size(36, 36);
+            this.userGoBtn.Text = "toolStripButton1";
+            this.userGoBtn.Click += new System.EventHandler(this.userGoBtn_Click);
             // 
             // UserControlTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.toolStripUserCtrl);
             this.Name = "UserControlTabs";
-            this.Size = new System.Drawing.Size(1210, 708);
+            this.Size = new System.Drawing.Size(1708, 602);
             this.Load += new System.EventHandler(this.UserControlTabs_Load);
+            this.toolStripUserCtrl.ResumeLayout(false);
+            this.toolStripUserCtrl.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.ToolStrip toolStripUserCtrl;
+        private System.Windows.Forms.ToolStripButton userBackBtn;
+        private System.Windows.Forms.ToolStripButton userFwdBtn;
+        private System.Windows.Forms.ToolStripButton userRefreshBtn;
+        private System.Windows.Forms.ToolStripButton userHomeBtn;
+        private System.Windows.Forms.ToolStripTextBox userAddyTextBox;
+        private System.Windows.Forms.ToolStripButton userGoBtn;
     }
 }

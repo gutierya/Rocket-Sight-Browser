@@ -24,5 +24,41 @@ namespace WebBrowser.UI
         {
 
         }
+
+        //Toolstip back button
+        private void userBackBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Toolstip forward button
+        private void userFwdBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Toolstip refresh button
+        private void userRefreshBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Toolstip Home button
+        private void userHomeBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        ////Toolstip Address textbox navigation
+        private void userAddyTextBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Toolstip Go button
+        private void userGoBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
