@@ -37,6 +37,13 @@ namespace WebBrowser.UI
             userCtrlWebBrowser.Navigate(url);
         }
 
+        //BackLinks Field - stack of strings
+        public void backLinkField()
+        {
+            String url = userAddyTextBox.Text;
+            backLink.Push(url);
+        }
+
         //Toolstip forward button
         private void userFwdBtn_Click(object sender, EventArgs e)
         {
@@ -52,13 +59,22 @@ namespace WebBrowser.UI
             }
         }
 
+        //FwdLinks Field - stack of strings
+        public void fwdLinkField()
+        {
+            while (userAddyTextBox.Text != null)
+            {
+                fwdLink.Push(userAddyTextBox.Text);
+            }
+        }
+
         //Toolstip refresh button
         private void userRefreshBtn_Click(object sender, EventArgs e)
         {
 
         }
 
-        //Toolstip Home button
+        //Toolstip Home button - to be added
         private void userHomeBtn_Click(object sender, EventArgs e)
         {
 
@@ -73,7 +89,8 @@ namespace WebBrowser.UI
         //Toolstip Go button
         private void userGoBtn_Click(object sender, EventArgs e)
         {
-
+            String url = userAddyTextBox.Text;
+            backLink.Push(url);
         }
 
         //Webbrowser usercontrol
