@@ -35,12 +35,13 @@ namespace WebBrowser.UI
 
         }
 
-        //Go Button functionality
+        /*Go Button functionality - removed per module 4
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
             string url = AddressTxtBox.Text;
             webBrowser1.Navigate(url);
         }
+        */
 
         //tab control housing webBrowser control
         private void tabPage1_Click(object sender, EventArgs e)
@@ -48,8 +49,7 @@ namespace WebBrowser.UI
 
         }
 
-        //Toolstrip Controls
-        //Address Bar
+        /*Toolstrip Controls Address Bar - removed per module 4
         private void AddressTxtBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -64,6 +64,7 @@ namespace WebBrowser.UI
                 }
             }
         }
+        */
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
