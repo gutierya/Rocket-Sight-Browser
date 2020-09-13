@@ -37,7 +37,7 @@
             this.userAddyTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.userGoBtn = new System.Windows.Forms.ToolStripButton();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.webBrowser2 = new System.Windows.Forms.WebBrowser();
+            this.userCtrlWebBrowser = new System.Windows.Forms.WebBrowser();
             this.toolStripUserCtrl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,6 +101,7 @@
             // 
             this.userAddyTextBox.Name = "userAddyTextBox";
             this.userAddyTextBox.Size = new System.Drawing.Size(600, 39);
+            this.userAddyTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.userAddyTextBox_KeyUp);
             this.userAddyTextBox.Click += new System.EventHandler(this.userAddyTextBox_Click);
             // 
             // userGoBtn
@@ -122,21 +123,21 @@
             this.webBrowser1.Size = new System.Drawing.Size(1708, 563);
             this.webBrowser1.TabIndex = 1;
             // 
-            // webBrowser2
+            // userCtrlWebBrowser
             // 
-            this.webBrowser2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser2.Location = new System.Drawing.Point(0, 39);
-            this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser2.Name = "webBrowser2";
-            this.webBrowser2.Size = new System.Drawing.Size(1708, 563);
-            this.webBrowser2.TabIndex = 2;
-            this.webBrowser2.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser2_DocumentCompleted);
+            this.userCtrlWebBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userCtrlWebBrowser.Location = new System.Drawing.Point(0, 39);
+            this.userCtrlWebBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.userCtrlWebBrowser.Name = "userCtrlWebBrowser";
+            this.userCtrlWebBrowser.Size = new System.Drawing.Size(1708, 563);
+            this.userCtrlWebBrowser.TabIndex = 2;
+            this.userCtrlWebBrowser.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser2_DocumentCompleted);
             // 
             // UserControlTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.webBrowser2);
+            this.Controls.Add(this.userCtrlWebBrowser);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.toolStripUserCtrl);
             this.Name = "UserControlTabs";
@@ -159,6 +160,6 @@
         private System.Windows.Forms.ToolStripTextBox userAddyTextBox;
         private System.Windows.Forms.ToolStripButton userGoBtn;
         private System.Windows.Forms.WebBrowser webBrowser1;
-        private System.Windows.Forms.WebBrowser webBrowser2;
+        private System.Windows.Forms.WebBrowser userCtrlWebBrowser;
     }
 }

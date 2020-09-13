@@ -28,13 +28,28 @@ namespace WebBrowser.UI
         //Toolstip back button
         private void userBackBtn_Click(object sender, EventArgs e)
         {
+            //pushing current link to top of fwd stack
+            fwdLink.Push(userAddyTextBox.Text);
+            String url = userAddyTextBox.Text;
+            backLink.Push(url);
 
+            //navigate url
+            userCtrlWebBrowser.Navigate(url);
         }
 
         //Toolstip forward button
         private void userFwdBtn_Click(object sender, EventArgs e)
         {
+            foreach (var addy in fwdLink)
+            {
+                //pushing current link to top of back stack
+                backLink.Push(userAddyTextBox.Text);
+                String url = userAddyTextBox.Text;
+                fwdLink.Pop();
 
+                //navigate url
+                userCtrlWebBrowser.Navigate(url);
+            }
         }
 
         //Toolstip refresh button
@@ -49,7 +64,7 @@ namespace WebBrowser.UI
 
         }
 
-        ////Toolstip Address textbox navigation
+        ////Toolstip Address textbox 
         private void userAddyTextBox_Click(object sender, EventArgs e)
         {
 
@@ -65,6 +80,22 @@ namespace WebBrowser.UI
         private void webBrowser2_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
 
+        }
+
+        //Text address bar - key Code event handler
+        private void userAddyTextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                String url = userAddyTextBox.Text;
+
+                if (Uri.IsWellFormedUriString(url, UriKind.RelativeOrAbsolute))
+                {
+                    userAddyTextBox.Text = url;
+                    userCtrlWebBrowser.Navigate(url);
+                    userCtrlWebBrowser.ScriptErrorsSuppressed = true;
+                }
+            }
         }
     }
 }
