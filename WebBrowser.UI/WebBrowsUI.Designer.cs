@@ -170,6 +170,7 @@
             this.userControlTabs2.Name = "userControlTabs2";
             this.userControlTabs2.Size = new System.Drawing.Size(2002, 884);
             this.userControlTabs2.TabIndex = 0;
+            this.userControlTabs2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.userControlTabs2_KeyDown);
             // 
             // WebBrowsUI
             // 

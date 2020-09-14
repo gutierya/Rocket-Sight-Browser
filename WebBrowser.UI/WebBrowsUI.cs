@@ -12,10 +12,12 @@ namespace WebBrowser.UI
 {
     public partial class WebBrowsUI : Form
     {
+
         public WebBrowsUI()
         {
             InitializeComponent();
         }
+       
 
         //Strip Menu item action
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -77,6 +79,9 @@ namespace WebBrowser.UI
             String click = "TabPage " + (tabControl1.TabCount + 1).ToString();
             TabPage theTabPg = new TabPage(click);
             tabControl1.TabPages.Add(click);
+
+            theTabPg.Controls.Add(new UserControl());
+
         }
 
         //File Tab - close tab when clicked
@@ -85,18 +90,18 @@ namespace WebBrowser.UI
             tabControl1.TabPages.Remove(tabControl1.SelectedTab);
             tabControl1.TabPages.Clear();
         }
-
-        //Tab control
-        private void tabControl1_KeyDown(object sender, KeyEventArgs e)
+   
+        //Adding menu item functionality
+        private void userControlTabs2_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.W && e.Modifiers == Keys.Control)
-            {
-                this.closeCurrentTabToolStripMenuItem_Click(sender, e);
-            }
-            else if (e.KeyCode == Keys.T && e.Modifiers == Keys.Control)
+            if (e.KeyCode == Keys.T && e.Modifiers == Keys.Control)
             {
                 this.newTabToolStripMenuItem_Click(sender, e);
             }
+            else if (e.KeyCode == Keys.W && e.Modifiers == Keys.Control)
+            {
+                this.closeCurrentTabToolStripMenuItem_Click(sender, e);
+            }
         }
-    }
+}
 }
