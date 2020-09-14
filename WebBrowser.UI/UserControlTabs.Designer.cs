@@ -36,9 +36,9 @@
             this.userHomeBtn = new System.Windows.Forms.ToolStripButton();
             this.userAddyTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.userGoBtn = new System.Windows.Forms.ToolStripButton();
+            this.userBookmarkBtn = new System.Windows.Forms.ToolStripButton();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.userCtrlWebBrowser = new System.Windows.Forms.WebBrowser();
-            this.userBookmarkBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripUserCtrl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,6 +116,16 @@
             this.userGoBtn.Text = "toolStripButton1";
             this.userGoBtn.Click += new System.EventHandler(this.userGoBtn_Click);
             // 
+            // userBookmarkBtn
+            // 
+            this.userBookmarkBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.userBookmarkBtn.Image = ((System.Drawing.Image)(resources.GetObject("userBookmarkBtn.Image")));
+            this.userBookmarkBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.userBookmarkBtn.Name = "userBookmarkBtn";
+            this.userBookmarkBtn.Size = new System.Drawing.Size(36, 36);
+            this.userBookmarkBtn.Text = "toolStripButton1";
+            this.userBookmarkBtn.Click += new System.EventHandler(this.userBookmarkBtn_Click);
+            // 
             // webBrowser1
             // 
             this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -134,16 +144,6 @@
             this.userCtrlWebBrowser.Size = new System.Drawing.Size(1708, 563);
             this.userCtrlWebBrowser.TabIndex = 2;
             this.userCtrlWebBrowser.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser2_DocumentCompleted);
-            // 
-            // userBookmarkBtn
-            // 
-            this.userBookmarkBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.userBookmarkBtn.Image = ((System.Drawing.Image)(resources.GetObject("userBookmarkBtn.Image")));
-            this.userBookmarkBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.userBookmarkBtn.Name = "userBookmarkBtn";
-            this.userBookmarkBtn.Size = new System.Drawing.Size(36, 36);
-            this.userBookmarkBtn.Text = "toolStripButton1";
-            this.userBookmarkBtn.Click += new System.EventHandler(this.userBookmarkBtn_Click);
             // 
             // UserControlTabs
             // 

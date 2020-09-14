@@ -85,5 +85,18 @@ namespace WebBrowser.UI
             tabControl1.TabPages.Remove(tabControl1.SelectedTab);
             tabControl1.TabPages.Clear();
         }
+
+        //Tab control
+        private void tabControl1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.W && e.Modifiers == Keys.Control)
+            {
+                this.closeCurrentTabToolStripMenuItem_Click(sender, e);
+            }
+            else if (e.KeyCode == Keys.T && e.Modifiers == Keys.Control)
+            {
+                this.newTabToolStripMenuItem_Click(sender, e);
+            }
+        }
     }
 }

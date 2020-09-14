@@ -28,13 +28,13 @@ namespace WebBrowser.UI
         //Toolstip back button
         private void userBackBtn_Click(object sender, EventArgs e)
         {
+            String url = userAddyTextBox.Text;
             //pushing current link to top of fwd stack
             fwdLink.Push(url);
-            String url = userAddyTextBox.Text;
 
             //navigate url
             String backNextUrl = backLink.Pop();
-            userCtrlWebBrowser.Navigate(nextUrl);
+            userCtrlWebBrowser.Navigate(backNextUrl);
             userAddyTextBox.Text = backNextUrl;
         }
 
@@ -49,14 +49,14 @@ namespace WebBrowser.UI
         private void userFwdBtn_Click(object sender, EventArgs e)
         {
 
-                //pushing current link to top of back stack
-                backLink.Push(url);
-                String url = userAddyTextBox.Text;
-                string fwdNextUrl = fwdLink.Pop();
+            //pushing current link to top of back stack
+            String url = userAddyTextBox.Text;
+            backLink.Push(url);
+            string fwdNextUrl = fwdLink.Pop();
 
-                //navigate url
-                userCtrlWebBrowser.Navigate(fwdNextUrl);
-                userAddyTextBox.Text = fwdNextUrl;
+            //navigate url
+            userCtrlWebBrowser.Navigate(fwdNextUrl);
+            userAddyTextBox.Text = fwdNextUrl;
         }
 
         //FwdLinks Field - stack of strings
