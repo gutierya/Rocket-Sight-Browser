@@ -32,7 +32,7 @@ namespace WebBrowser.logic
                 var item = new HistoryItem();
                 item.URL = row.URL;
                 item.Title = row.Title;
-                item.Date = row.Date;
+                item.Date = Convert.ToDateTime(row.Date);
                 results.Add(item);
             }
             return results;

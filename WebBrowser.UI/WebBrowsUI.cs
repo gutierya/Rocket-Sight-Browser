@@ -107,13 +107,15 @@ namespace WebBrowser.UI
         //tools -> manage 'history' functionality
         private void manageHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            var hForm = new HistoryManagerForm();
+            hForm.ShowDialog();
         }
 
         //tools -> manage 'bookmarks' functionality
         private void manageBookmarksToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            var bForm = new BookmarkManagerForm();
+            bForm.ShowDialog();
         }
     }
 }
