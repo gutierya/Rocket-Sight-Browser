@@ -103,5 +103,17 @@ namespace WebBrowser.UI
                 this.closeCurrentTabToolStripMenuItem_Click(sender, e);
             }
         }
-}
+
+        //tools -> manage 'history' functionality
+        private void manageHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //tools -> manage 'bookmarks' functionality
+        private void manageBookmarksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
