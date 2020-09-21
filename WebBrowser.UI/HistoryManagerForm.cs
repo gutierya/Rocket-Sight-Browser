@@ -16,5 +16,10 @@ namespace WebBrowser.UI
         {
             InitializeComponent();
         }
+
+        private void HistoryManagerForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
