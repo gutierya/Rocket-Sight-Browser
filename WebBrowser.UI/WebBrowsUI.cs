@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebBrowser.logic;
+
 
 namespace WebBrowser.UI
 {
@@ -73,14 +75,15 @@ namespace WebBrowser.UI
 
         }
 
-        //File Tab - new tab opens when clicked
+        //File Tab - new tab opens when clicked - mod4/5
         private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            String click = "TabPage " + (tabControl1.TabCount + 1).ToString();
-            TabPage theTabPg = new TabPage(click);
-            tabControl1.TabPages.Add(click);
+            TabPage myTab = new TabPage("");
+            tabControl1.TabPages.Add(myTab);
 
-            theTabPg.Controls.Add(new UserControl());
+            UserControl Web = new UserControlTabs();
+            Web.Dock = DockStyle.Fill;
+            myTab.Controls.Add(Web);
 
         }
 
@@ -104,18 +107,18 @@ namespace WebBrowser.UI
             }
         }
 
-        //tools -> manage 'history' functionality
+        //tools -> manage 'history' functionality - Mod 5
         private void manageHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var hForm = new HistoryManagerForm();
             hForm.ShowDialog();
         }
 
-        //tools -> manage 'bookmarks' functionality
+        //tools -> manage 'bookmarks' functionality - Mod 5
         private void manageBookmarksToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var bForm = new BookmarkManagerForm();
-            bForm.ShowDialog();
+            var mbForm = new BookmarkManagerForm();
+            mbForm.ShowDialog();
         }
     }
 }

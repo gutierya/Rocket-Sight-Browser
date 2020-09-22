@@ -7,50 +7,63 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebBrowser.logic; //referencing logic
+using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace WebBrowser.UI
 {
     public partial class UserControlTabs : UserControl
     {
-        Stack<string> backLink = new Stack<string>();
-        Stack<string> fwdLink = new Stack<string>();
 
+        //initialization
         public UserControlTabs()
         {
             InitializeComponent();
         }
 
-        private void UserControlTabs_Load(object sender, EventArgs e)
+        //Toolstip Home button - functionality to be added - module 3
+        private void userHomeBtn_Click(object sender, EventArgs e)
         {
 
         }
 
-        //Toolstip back button
+        //module 4
+        Stack<string> backLink = new Stack<string>();
+        Stack<string> fwdLink = new Stack<string>();
+
+        //module 5
+        public string URL { get; private set; }
+        public object Title { get; private set; }
+        public DateTime Date { get; private set; }
+
+
+        //Toolstip back button - mod 4
         private void userBackBtn_Click(object sender, EventArgs e)
         {
-            String url = userAddyTextBox.Text;
+            string url = userAddyTextBox.Text;
             //pushing current link to top of fwd stack
             fwdLink.Push(url);
 
             //navigate url
-            String backNextUrl = backLink.Pop();
+            string backNextUrl = backLink.Pop();
             userCtrlWebBrowser.Navigate(backNextUrl);
             userAddyTextBox.Text = backNextUrl;
         }
 
-        //BackLinks Field - stack of strings
+        //BackLinks Field - stack of strings - mod 4
         public void backLinkField()
         {
-            String url = userAddyTextBox.Text;
+            string url = userAddyTextBox.Text;
             backLink.Push(url);
         }
 
-        //Toolstip forward button
+        //Toolstip forward button - mod 4
         private void userFwdBtn_Click(object sender, EventArgs e)
         {
 
             //pushing current link to top of back stack
-            String url = userAddyTextBox.Text;
+            string url = userAddyTextBox.Text;
             backLink.Push(url);
             string fwdNextUrl = fwdLink.Pop();
 
@@ -59,7 +72,7 @@ namespace WebBrowser.UI
             userAddyTextBox.Text = fwdNextUrl;
         }
 
-        //FwdLinks Field - stack of strings
+        //FwdLinks Field - stack of strings - mod 4
         public void fwdLinkField()
         {
             while (userAddyTextBox.Text != null)
@@ -68,47 +81,58 @@ namespace WebBrowser.UI
             }
         }
 
-        //Toolstip refresh button
+        //Toolstip refresh button - mod 3/4
         private void userRefreshBtn_Click(object sender, EventArgs e)
         {
             userCtrlWebBrowser.Refresh();
         }
 
-        //Toolstip Home button - functionality to be added
-        private void userHomeBtn_Click(object sender, EventArgs e)
+        //do not delete - creates UI for usercontrol
+        private void UserControlTabs_Load(object sender, EventArgs e)
         {
 
         }
 
-        ////Toolstip Address textbox 
+
+
+        ////Toolstip Address textbox - added module 4
         private void userAddyTextBox_Click(object sender, EventArgs e)
         {
+            webBrowser1.Navigate(userAddyTextBox.Text.ToString());
 
+            HistoryItem item = new HistoryItem(); //*I need to investigate why it cant access public class even though using "using"
+
+            URL = userAddyTextBox.Text.ToString();
+            Title = userAddyTextBox.Text.ToString();
+            Date = DateTime.Now;
         }
 
         //Toolstip Go button
         private void userGoBtn_Click(object sender, EventArgs e)
         {
-            String url = userAddyTextBox.Text;
+            webBrowser1.Navigate(userAddyTextBox.Text.ToString());
+
+            String url = userAddyTextBox.Text; 
             userCtrlWebBrowser.Navigate(url);
 
             //links pushed 
             backLink.Push(url);
             fwdLink.Push(url);
+            
         }
 
-        //Webbrowser usercontrol
+        //Webbrowser usercontrol - mod 4
         private void webBrowser2_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
 
         }
 
-        //Text address bar - key Code event handler
+        //Text address bar - key Code event handler - mod 4
         private void userAddyTextBox_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                String url = userAddyTextBox.Text;
+                string url = userAddyTextBox.Text;
 
                 if (Uri.IsWellFormedUriString(url, UriKind.RelativeOrAbsolute))
                 {
@@ -123,10 +147,14 @@ namespace WebBrowser.UI
             }
         }
 
-        //bookmark button - no functionality for now
+        //bookmark button 
         private void userBookmarkBtn_Click(object sender, EventArgs e)
         {
+            var item = new BookmarkItem(); //debugging in progress to see why can't access public class
+            item.URL = userAddyTextBox.Text;
+            item.Title = webBrowser1.DocumentTitle;
 
+            BookmarkManager.addItemBookmark(item);
         }
     }
 }

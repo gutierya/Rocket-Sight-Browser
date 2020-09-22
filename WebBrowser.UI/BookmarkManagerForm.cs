@@ -20,9 +20,11 @@ namespace WebBrowser.UI
 
         private void BookmarkManagerForm_Load(object sender, EventArgs e)
         {
-            var items = BookmarkManager.GetItems();
-            listBox1.Items.Clear();
+            //get all bookmark items
+            var items = BookmarkManager.GetBookmarkItems();
+            listBox1.Items.Clear(); //listbox of bookmark form
 
+            //Display in listbox
             foreach (var item in items)
             {
                 listBox1.Items.Add(string.Format("{0} ({1})", item.Title, item.URL));

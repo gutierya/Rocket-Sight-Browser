@@ -144,10 +144,19 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(215, 38);
             this.aboutToolStripMenuItem.Text = "About-->";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+
+            // userControlTabs2
+            // 
+            this.userControlTabs2.Location = new System.Drawing.Point(6, 0);
+            this.userControlTabs2.Name = "userControlTabs2";
+            this.userControlTabs2.Size = new System.Drawing.Size(2002, 884);
+            this.userControlTabs2.TabIndex = 0;
+            this.userControlTabs2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.userControlTabs2_KeyDown);
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.userControlTabs2);
+            
+            //this.tabPage1.Controls.Add(this.userControlTabs);
             this.tabPage1.Location = new System.Drawing.Point(8, 39);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -156,14 +165,8 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            
             // 
-            // userControlTabs2
-            // 
-            this.userControlTabs2.Location = new System.Drawing.Point(6, 0);
-            this.userControlTabs2.Name = "userControlTabs2";
-            this.userControlTabs2.Size = new System.Drawing.Size(2002, 884);
-            this.userControlTabs2.TabIndex = 0;
-            this.userControlTabs2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.userControlTabs2_KeyDown);
             // 
             // tabControl1
             // 
