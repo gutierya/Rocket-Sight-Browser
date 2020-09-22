@@ -78,7 +78,7 @@ namespace WebBrowser.UI
         //File Tab - new tab opens when clicked - mod4/5
         private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TabPage myTab = new TabPage("");
+            TabPage myTab = new TabPage("Click for new tab!");
             tabControl1.TabPages.Add(myTab);
 
             UserControl Web = new UserControlTabs();
@@ -87,7 +87,7 @@ namespace WebBrowser.UI
 
         }
 
-        //File Tab - close tab when clicked
+        //File Tab - close tab when clicked 
         private void closeCurrentTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tabControl1.TabPages.Remove(tabControl1.SelectedTab);

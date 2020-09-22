@@ -98,7 +98,7 @@ namespace WebBrowser.UI
         {
             webBrowser1.Navigate(userAddyTextBox.Text.ToString());
 
-            HistoryItem item = new HistoryItem(); //*I need to investigate why it cant access public class even though using "using"
+            HistoryItem item = new HistoryItem(); //
 
             URL = userAddyTextBox.Text.ToString();
             Title = userAddyTextBox.Text.ToString();
@@ -119,10 +119,19 @@ namespace WebBrowser.UI
             
         }
 
-        //Webbrowser usercontrol - mod 4
+        //Webbrowser usercontrol - mod 5 - after load, add to history table
         private void webBrowser2_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
+            if (webBrowser1.Url.AbsoluteUri == e.Url.AbsoluteUri)
+            {
+                var item = new HistoryItem();
+                item.URL = userAddyTextBox.Text;
+                item.Title = webBrowser1.DocumentTitle;
+                item.Date = DateTime.Now.ToString("mm/dd/yyyy HH:mm:ss");
 
+                //using history manager to add new history item to db
+                HistoryManager.AddItemHistory(item);
+            }
         }
 
         //Text address bar - key Code event handler - mod 4

@@ -9,7 +9,7 @@ namespace WebBrowser.logic
 {
     public class HistoryManager
     {
-        public static void AddItem(HistoryItem item)
+        public static void AddItemHistory(HistoryItem item)
         {
             try
             {
