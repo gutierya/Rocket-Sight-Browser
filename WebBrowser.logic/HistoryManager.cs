@@ -7,7 +7,7 @@ using WebBrowser.Data.HistoryBookmarkDBDataSetTableAdapters;
 
 namespace WebBrowser.logic
 {
-    class HistoryManager
+    public class HistoryManager
     {
         public static void AddItem(HistoryItem item)
         {
@@ -21,7 +21,7 @@ namespace WebBrowser.logic
             }
         }
 
-        public static List<HistoryItem> GetItems()
+        public static List<HistoryItem> GetHistoryItems()
         {
             var adapter = new HistoryTableAdapter();
             var results = new List<HistoryItem>();
@@ -32,10 +32,16 @@ namespace WebBrowser.logic
                 var item = new HistoryItem();
                 item.URL = row.URL;
                 item.Title = row.Title;
-                item.Date = Convert.ToDateTime(row.Date);
+                item.Date = row.Date;
                 results.Add(item);
             }
             return results;
         }
+
+        /*public object GetHistoryItems()
+        {
+            throw new NotImplementedException();
+        }
+        */
     }
 }

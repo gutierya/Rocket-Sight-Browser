@@ -93,9 +93,7 @@ namespace WebBrowser.UI
 
         }
 
-
-
-        ////Toolstip Address textbox - added module 4
+        ////Toolstip Address textbox - added module 4 and 5
         private void userAddyTextBox_Click(object sender, EventArgs e)
         {
             webBrowser1.Navigate(userAddyTextBox.Text.ToString());
@@ -147,10 +145,10 @@ namespace WebBrowser.UI
             }
         }
 
-        //bookmark button 
+        //bookmark button - Module 5 - when clicked url and title of pg added to DB
         private void userBookmarkBtn_Click(object sender, EventArgs e)
         {
-            var item = new BookmarkItem(); //debugging in progress to see why can't access public class
+            var item = new BookmarkItem(); 
             item.URL = userAddyTextBox.Text;
             item.Title = webBrowser1.DocumentTitle;
 

@@ -107,14 +107,14 @@ namespace WebBrowser.UI
             }
         }
 
-        //tools -> manage 'history' functionality - Mod 5
+        //tools -> manage 'history' functionality - Mod 5 aka "MenuStrip Controls"
         private void manageHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var hForm = new HistoryManagerForm();
             hForm.ShowDialog();
         }
 
-        //tools -> manage 'bookmarks' functionality - Mod 5
+        //tools -> manage 'bookmarks' functionality - Mod 5  aka "MenuStrip Controls"
         private void manageBookmarksToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var mbForm = new BookmarkManagerForm();

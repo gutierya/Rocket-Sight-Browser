@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WebBrowser.logic;
+using WebBrowser.logic; //reference
 
 namespace WebBrowser.UI
 {
@@ -21,7 +21,7 @@ namespace WebBrowser.UI
         private void HistoryManagerForm_Load(object sender, EventArgs e)
         {
             //get all history items
-            var items = HistoryManager.GetHistoryItems();
+            var items = HistoryManager.GetHistoryItems(); //debug why HManager inaccessible now
             listBox1.Items.Clear();
 
             // Display in listbox
