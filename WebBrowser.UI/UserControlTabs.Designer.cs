@@ -39,6 +39,7 @@
             this.userBookmarkBtn = new System.Windows.Forms.ToolStripButton();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.userCtrlWebBrowser = new System.Windows.Forms.WebBrowser();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripUserCtrl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,10 +146,20 @@
             this.userCtrlWebBrowser.TabIndex = 2;
             this.userCtrlWebBrowser.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser2_DocumentCompleted);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 564);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1708, 38);
+            this.statusStrip1.TabIndex = 3;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
             // UserControlTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.userCtrlWebBrowser);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.toolStripUserCtrl);
@@ -174,5 +185,6 @@
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.WebBrowser userCtrlWebBrowser;
         private System.Windows.Forms.ToolStripButton userBookmarkBtn;
+        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }

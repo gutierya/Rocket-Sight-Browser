@@ -41,10 +41,11 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.actualUserControl = new WebBrowser.UI.UserControlTabs();
             this.userControlTabs2 = new WebBrowser.UI.UserControlTabs();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.actualUserControl = new WebBrowser.UI.UserControlTabs();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -59,7 +60,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(2036, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(2036, 42);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -72,39 +73,39 @@
             this.printPageToolStripMenuItem,
             this.exitWebBrowserToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(69, 36);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(69, 38);
             this.fileToolStripMenuItem.Text = "File:";
             // 
             // newTabToolStripMenuItem
             // 
             this.newTabToolStripMenuItem.Name = "newTabToolStripMenuItem";
-            this.newTabToolStripMenuItem.Size = new System.Drawing.Size(302, 38);
+            this.newTabToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
             this.newTabToolStripMenuItem.Text = "New Tab";
             this.newTabToolStripMenuItem.Click += new System.EventHandler(this.newTabToolStripMenuItem_Click);
             // 
             // closeCurrentTabToolStripMenuItem
             // 
             this.closeCurrentTabToolStripMenuItem.Name = "closeCurrentTabToolStripMenuItem";
-            this.closeCurrentTabToolStripMenuItem.Size = new System.Drawing.Size(302, 38);
+            this.closeCurrentTabToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
             this.closeCurrentTabToolStripMenuItem.Text = "Close Current Tab";
             this.closeCurrentTabToolStripMenuItem.Click += new System.EventHandler(this.closeCurrentTabToolStripMenuItem_Click);
             // 
             // saveAsHTMLToolStripMenuItem
             // 
             this.saveAsHTMLToolStripMenuItem.Name = "saveAsHTMLToolStripMenuItem";
-            this.saveAsHTMLToolStripMenuItem.Size = new System.Drawing.Size(302, 38);
+            this.saveAsHTMLToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
             this.saveAsHTMLToolStripMenuItem.Text = "Save as HTML";
             // 
             // printPageToolStripMenuItem
             // 
             this.printPageToolStripMenuItem.Name = "printPageToolStripMenuItem";
-            this.printPageToolStripMenuItem.Size = new System.Drawing.Size(302, 38);
+            this.printPageToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
             this.printPageToolStripMenuItem.Text = "Print Page";
             // 
             // exitWebBrowserToolStripMenuItem
             // 
             this.exitWebBrowserToolStripMenuItem.Name = "exitWebBrowserToolStripMenuItem";
-            this.exitWebBrowserToolStripMenuItem.Size = new System.Drawing.Size(302, 38);
+            this.exitWebBrowserToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
             this.exitWebBrowserToolStripMenuItem.Text = "Exit Web Browser";
             this.exitWebBrowserToolStripMenuItem.Click += new System.EventHandler(this.exitWebBrowserToolStripMenuItem_Click);
             // 
@@ -114,7 +115,7 @@
             this.manageHistoryToolStripMenuItem,
             this.manageBookmarksToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(82, 36);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(82, 38);
             this.toolsToolStripMenuItem.Text = "Tools";
             // 
             // manageHistoryToolStripMenuItem
@@ -136,7 +137,7 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(77, 36);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(77, 38);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
@@ -148,6 +149,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.actualUserControl);
             this.tabPage1.Location = new System.Drawing.Point(8, 39);
             this.tabPage1.Name = "tabPage1";
@@ -157,6 +159,13 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // actualUserControl
+            // 
+            this.actualUserControl.Location = new System.Drawing.Point(0, 0);
+            this.actualUserControl.Name = "actualUserControl";
+            this.actualUserControl.Size = new System.Drawing.Size(2005, 710);
+            this.actualUserControl.TabIndex = 0;
             // 
             // userControlTabs2
             // 
@@ -175,12 +184,12 @@
             this.tabControl1.Size = new System.Drawing.Size(2024, 931);
             this.tabControl1.TabIndex = 2;
             // 
-            // actualUserControl
+            // textBox1
             // 
-            this.actualUserControl.Location = new System.Drawing.Point(0, 0);
-            this.actualUserControl.Name = "actualUserControl";
-            this.actualUserControl.Size = new System.Drawing.Size(2005, 710);
-            this.actualUserControl.TabIndex = 0;
+            this.textBox1.Location = new System.Drawing.Point(851, 261);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 31);
+            this.textBox1.TabIndex = 1;
             // 
             // WebBrowsUI
             // 
@@ -195,6 +204,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -221,5 +231,6 @@
         private UserControlTabs userControlTabs1;
         private UserControlTabs userControlTabs2;
         private UserControlTabs actualUserControl;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
