@@ -49,6 +49,10 @@ namespace WebBrowser.UI
             string backNextUrl = backLink.Pop();
             userCtrlWebBrowser.Navigate(backNextUrl);
             userAddyTextBox.Text = backNextUrl;
+
+            //Mod 6 - adding statuslabel for loading when pg loading
+            timer1.Start();
+            toolStripStatusLabel1.Text = "Loading";
         }
 
         //BackLinks Field - stack of strings - mod 4
@@ -70,6 +74,10 @@ namespace WebBrowser.UI
             //navigate url
             userCtrlWebBrowser.Navigate(fwdNextUrl);
             userAddyTextBox.Text = fwdNextUrl;
+
+            //Mod 6 - adding statuslabel for loading when pg loading
+            timer1.Start();
+            toolStripStatusLabel1.Text = "Loading";
         }
 
         //FwdLinks Field - stack of strings - mod 4
@@ -85,6 +93,10 @@ namespace WebBrowser.UI
         private void userRefreshBtn_Click(object sender, EventArgs e)
         {
             userCtrlWebBrowser.Refresh();
+
+            //Mod 6 - adding statuslabel for loading when pg loading
+            timer1.Start();
+            toolStripStatusLabel1.Text = "Loading";
         }
 
         //do not delete - creates UI for usercontrol
@@ -103,6 +115,10 @@ namespace WebBrowser.UI
             URL = userAddyTextBox.Text.ToString();
             Title = userAddyTextBox.Text.ToString();
             Date = DateTime.Now;
+
+            //Mod 6 - adding statuslabel for loading when pg loading
+            timer1.Start();
+            toolStripStatusLabel1.Text = "Loading";
         }
 
         //Toolstip Go button
@@ -131,6 +147,11 @@ namespace WebBrowser.UI
 
                 //using history manager to add new history item to db
                 HistoryManager.AddItemHistory(item);
+
+                //Mod 6 - adding statuslabel
+                toolStripStatusLabel1.Text = "Done";
+                timer1.Stop();
+                toolStripProgressBar1.Value = 0;
             }
         }
 
@@ -150,6 +171,10 @@ namespace WebBrowser.UI
                     //links pushed 
                     backLink.Push(url);
                     fwdLink.Push(url);
+
+                    //Mod 6 - adding statuslabel for loading when pg loading
+                    timer1.Start();
+                    toolStripStatusLabel1.Text = "Loading";
                 }
             }
         }
@@ -162,6 +187,19 @@ namespace WebBrowser.UI
             item.Title = webBrowser1.DocumentTitle;
 
             BookmarkManager.addItemBookmark(item);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (this.toolStripProgressBar1.Value == 100)
+            {
+                timer1.Stop();
+                toolStripStatusLabel1.Text = "Done";
+            }
+            else
+            {
+                this.toolStripProgressBar1.Value++;
+            }
         }
     }
 }

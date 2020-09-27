@@ -174,6 +174,10 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(238, 41);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // UserControlTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
