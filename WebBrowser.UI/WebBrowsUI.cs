@@ -120,5 +120,11 @@ namespace WebBrowser.UI
             var mbForm = new BookmarkManagerForm();
             mbForm.ShowDialog();
         }
+
+        //Added module 6 - delete all history items
+        private void clearHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HistoryManager.ClearHistory();
+        }
     }
 }
