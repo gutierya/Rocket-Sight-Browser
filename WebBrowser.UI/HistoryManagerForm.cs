@@ -50,16 +50,23 @@ namespace WebBrowser.UI
         //clear history button
         private void button2_Click(object sender, EventArgs e)
         {
+            HistoryManager.ClearHistory();
             listBoxHist.Items.Clear();
         }
 
         //delete history button
         private void button3_Click(object sender, EventArgs e)
         {
+            /* removing old method for better call
             if (this.listBoxHist.SelectedIndex >=0)
             {
                 this.listBoxHist.Items.RemoveAt(this.listBoxHist.SelectedIndex);
             }
+            */
+            string input = listBoxHist.GetItemText(listBoxHist.SelectedItem);
+
+            HistoryManager.RemoveHistoryItem(input);
+            listBoxHist.Items.RemoveAt(listBoxHist.SelectedIndex);
         }
     }
 }

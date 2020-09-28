@@ -43,5 +43,34 @@ namespace WebBrowser.logic
             throw new NotImplementedException();
         }
         */
+
+        //clear history
+        public static void ClearHistory()
+        {
+            var adapter = new HistoryTableAdapter();
+            var rows = adapter.GetData();
+
+            foreach (var row in rows)
+            {
+                adapter.Delete(row.Id, row.URL, row.Title, row.Date);
+            }
+        }
+
+        //remove history
+        public static void RemoveHistoryItem(string historyRemove)
+        {
+            var adapter = new HistoryTableAdapter();
+            var rows = adapter.GetData();
+
+            foreach (var row in rows)
+            {
+                string confirm = string.Format("[{0}] {1} {2}", row.Date, row.Title, row.URL);
+
+                if (confirm == historyRemove)
+                {
+                    adapter.Delete(row.Id, row.URL, row.Title, row.Date);
+                }
+            }
+        }
     }
 }

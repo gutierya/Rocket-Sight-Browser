@@ -56,6 +56,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HistoryBookmarkDBDataSet.cs">
+      <DependentUpon>HistoryBookmarkDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="HistoryBookmarkDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

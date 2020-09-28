@@ -53,6 +53,7 @@ namespace WebBrowser.UI
             //Mod 6 - adding statuslabel for loading when pg loading
             timer1.Start();
             toolStripStatusLabel1.Text = "Loading";
+            toolStripProgressBar1.Value = 0;
         }
 
         //BackLinks Field - stack of strings - mod 4
@@ -78,6 +79,7 @@ namespace WebBrowser.UI
             //Mod 6 - adding statuslabel for loading when pg loading
             timer1.Start();
             toolStripStatusLabel1.Text = "Loading";
+            toolStripProgressBar1.Value = 0;
         }
 
         //FwdLinks Field - stack of strings - mod 4
@@ -97,6 +99,7 @@ namespace WebBrowser.UI
             //Mod 6 - adding statuslabel for loading when pg loading
             timer1.Start();
             toolStripStatusLabel1.Text = "Loading";
+            toolStripProgressBar1.Value = 0;
         }
 
         //do not delete - creates UI for usercontrol
@@ -132,7 +135,11 @@ namespace WebBrowser.UI
             //links pushed 
             backLink.Push(url);
             fwdLink.Push(url);
-            
+
+            //Mod 6 - adding statuslabel for loading when pg loading
+            timer1.Start();
+            toolStripStatusLabel1.Text = "Loading";
+            toolStripProgressBar1.Value = 0; 
         }
 
         //Webbrowser usercontrol - mod 5 - after load, add to history table
@@ -151,7 +158,7 @@ namespace WebBrowser.UI
                 //Mod 6 - adding statuslabel
                 toolStripStatusLabel1.Text = "Done";
                 timer1.Stop();
-                toolStripProgressBar1.Value = 0;
+                toolStripProgressBar1.Value = 100;
             }
         }
 
@@ -175,6 +182,7 @@ namespace WebBrowser.UI
                     //Mod 6 - adding statuslabel for loading when pg loading
                     timer1.Start();
                     toolStripStatusLabel1.Text = "Loading";
+                    toolStripProgressBar1.Value = 0;
                 }
             }
         }

@@ -50,16 +50,23 @@ namespace WebBrowser.UI
         //clear results button
         private void button2_Click(object sender, EventArgs e)
         {
+            BookmarkManager.ClearBookMarkItem();
             listBox1.Items.Clear();
         }
 
         //delete bookmark button
         private void button3_Click(object sender, EventArgs e)
         {
+            /* removing old method for better call
             if (this.listBox1.SelectedIndex >= 0)
             {
                 this.listBox1.Items.RemoveAt(this.listBox1.SelectedIndex);
             }
+            */
+            string input = listBox1.GetItemText(listBox1.SelectedItem);
+
+            HistoryManager.RemoveHistoryItem(input);
+            listBox1.Items.RemoveAt(listBox1.SelectedIndex);
         }
     }
 }

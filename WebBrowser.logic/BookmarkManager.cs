@@ -15,7 +15,7 @@ namespace WebBrowser.logic
         public static void addItemBookmark(BookmarkItem item)
         {
             var adapter = new BookmarksTableAdapter();
-            adapter.Insert(item.URL, item.Title);
+            //adapter.Insert(item.URL, item.Title); //insert method debug
         }
 
         //Get bookmark items and return/display from DB
@@ -36,5 +36,33 @@ namespace WebBrowser.logic
             }
             return results;
         }
+
+        public static void RemoveBookMarkItem(string bookmarkRemove)
+        {
+            var adapter = new BookmarksTableAdapter();
+            var rows = adapter.GetData();
+
+            foreach (var row in rows)
+            {
+                string confirm = string.Format("[{0}] {1} {2}", row.Id, row.Title, row.URL);
+
+                if (confirm == bookmarkRemove)
+                {
+                    adapter.Delete(row.Id, row.URL, row.Title);
+                }
+            }
+        }
+
+        public static void ClearBookMarkItem()
+        {
+            var adapter = new BookmarksTableAdapter();
+            var rows = adapter.GetData();
+
+            foreach (var row in rows)
+            {
+                adapter.Delete(row.Id, row.URL, row.Title);
+            }
+        }
+
     }
 }

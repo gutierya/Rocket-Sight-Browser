@@ -45,7 +45,6 @@
             this.userControlTabs2 = new WebBrowser.UI.UserControlTabs();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -60,7 +59,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(2036, 42);
+            this.menuStrip1.Size = new System.Drawing.Size(2036, 40);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -149,7 +148,6 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.actualUserControl);
             this.tabPage1.Location = new System.Drawing.Point(8, 39);
             this.tabPage1.Name = "tabPage1";
@@ -164,7 +162,7 @@
             // 
             this.actualUserControl.Location = new System.Drawing.Point(0, 0);
             this.actualUserControl.Name = "actualUserControl";
-            this.actualUserControl.Size = new System.Drawing.Size(2005, 710);
+            this.actualUserControl.Size = new System.Drawing.Size(2005, 824);
             this.actualUserControl.TabIndex = 0;
             // 
             // userControlTabs2
@@ -184,13 +182,6 @@
             this.tabControl1.Size = new System.Drawing.Size(2024, 931);
             this.tabControl1.TabIndex = 2;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(851, 261);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 31);
-            this.textBox1.TabIndex = 1;
-            // 
             // WebBrowsUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -204,7 +195,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -231,6 +221,5 @@
         private UserControlTabs userControlTabs1;
         private UserControlTabs userControlTabs2;
         private UserControlTabs actualUserControl;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

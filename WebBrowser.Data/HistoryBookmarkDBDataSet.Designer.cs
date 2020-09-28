@@ -10,8 +10,6 @@
 
 #pragma warning disable 1591
 
-using System;
-
 namespace WebBrowser.Data {
     
     
@@ -1434,11 +1432,6 @@ namespace WebBrowser.Data.HistoryBookmarkDBDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(string URL, string Title, int Original_Id, string Original_URL, string Original_Title) {
             return this.Update(Original_Id, URL, Title, Original_Id, Original_URL, Original_Title);
-        }
-
-        public void Insert(string uRL, string title)
-        {
-            throw new NotImplementedException();
         }
     }
     
