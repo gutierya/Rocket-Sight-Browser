@@ -22,12 +22,43 @@ namespace WebBrowser.UI
         {
             //get all history items
             var items = HistoryManager.GetHistoryItems(); //debug why HManager inaccessible now
-            listBox1.Items.Clear();
+            listBoxHist.Items.Clear();
 
             // Display in listbox
             foreach (var item in items)
             {
-                listBox1.Items.Add(string.Format("[{0}] {1} ({2})", item.Date, item.Title, item.URL));
+                listBoxHist.Items.Add(string.Format("[{0}] {1} ({2})", item.Date, item.Title, item.URL));
+            }
+        }
+
+        //search button history
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var items = HistoryManager.GetHistoryItems();
+
+            listBoxHist.Items.Clear();
+
+            foreach (var item in items)
+            {
+                if (item.Title.Contains(searchHistoryTextBox.Text) || item.URL.Contains(searchHistoryTextBox.Text))
+                {
+                    listBoxHist.Items.Add(string.Format("[{0}] ({2})", item.Date, item.Title, item.URL));
+                }
+            }
+        }
+
+        //clear history button
+        private void button2_Click(object sender, EventArgs e)
+        {
+            listBoxHist.Items.Clear();
+        }
+
+        //delete history button
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (this.listBoxHist.SelectedIndex >=0)
+            {
+                this.listBoxHist.Items.RemoveAt(this.listBoxHist.SelectedIndex);
             }
         }
     }

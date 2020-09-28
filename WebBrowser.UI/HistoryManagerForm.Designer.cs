@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBoxHist = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.searchHistoryTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listBox1
+            // listBoxHist
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
-            this.listBox1.Location = new System.Drawing.Point(101, 126);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(564, 554);
-            this.listBox1.TabIndex = 0;
+            this.listBoxHist.FormattingEnabled = true;
+            this.listBoxHist.ItemHeight = 25;
+            this.listBoxHist.Location = new System.Drawing.Point(101, 126);
+            this.listBoxHist.Name = "listBoxHist";
+            this.listBoxHist.Size = new System.Drawing.Size(564, 554);
+            this.listBoxHist.TabIndex = 0;
             // 
             // label1
             // 
@@ -64,12 +64,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Enter a Search text item:";
             // 
-            // textBox1
+            // searchHistoryTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(869, 126);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(400, 31);
-            this.textBox1.TabIndex = 3;
+            this.searchHistoryTextBox.Location = new System.Drawing.Point(869, 126);
+            this.searchHistoryTextBox.Name = "searchHistoryTextBox";
+            this.searchHistoryTextBox.Size = new System.Drawing.Size(400, 31);
+            this.searchHistoryTextBox.TabIndex = 3;
             // 
             // button1
             // 
@@ -79,6 +79,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Search History:";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -88,6 +89,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "Clear History:";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -97,6 +99,7 @@
             this.button3.TabIndex = 6;
             this.button3.Text = "Delete History:";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // HistoryManagerForm
             // 
@@ -106,10 +109,10 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.searchHistoryTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listBoxHist);
             this.Name = "HistoryManagerForm";
             this.Text = "HistoryManagerForm";
             this.Load += new System.EventHandler(this.HistoryManagerForm_Load);
@@ -120,10 +123,10 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBoxHist;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox searchHistoryTextBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
