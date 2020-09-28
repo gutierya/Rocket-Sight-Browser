@@ -60,7 +60,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(2036, 42);
+            this.menuStrip1.Size = new System.Drawing.Size(2036, 40);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -164,7 +164,7 @@
             // 
             this.actualUserControl.Location = new System.Drawing.Point(0, 0);
             this.actualUserControl.Name = "actualUserControl";
-            this.actualUserControl.Size = new System.Drawing.Size(2005, 824);
+            this.actualUserControl.Size = new System.Drawing.Size(2005, 878);
             this.actualUserControl.TabIndex = 0;
             // 
             // userControlTabs2
