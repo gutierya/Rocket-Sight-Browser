@@ -126,5 +126,12 @@ namespace WebBrowser.UI
         {
             HistoryManager.ClearHistory();
         }
+
+
+        //unused
+        private void actualUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

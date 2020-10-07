@@ -22,10 +22,12 @@ namespace WebBrowser.UI
             InitializeComponent();
         }
 
-        //Toolstip Home button - functionality to be added - module 3
+        //Toolstip Home button - functionality to be added - was module 3
         private void userHomeBtn_Click(object sender, EventArgs e)
         {
-
+            string url = "www.auburn.edu";
+            userCtrlWebBrowser.Navigate(url);
+            userCtrlWebBrowser.ScriptErrorsSuppressed = true;
         }
 
         //module 4

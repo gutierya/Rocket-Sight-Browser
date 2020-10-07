@@ -13,7 +13,7 @@ namespace WebBrowser.logic
 
         //Add bookmark item to DB
         public static void addItemBookmark(BookmarkItem item)
-        {
+        {  
             var adapter = new BookmarksTableAdapter();
             adapter.Insert(item.Id, item.URL, item.Title);
         }
