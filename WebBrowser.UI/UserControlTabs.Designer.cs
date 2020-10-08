@@ -109,8 +109,7 @@
             // 
             this.userAddyTextBox.Name = "userAddyTextBox";
             this.userAddyTextBox.Size = new System.Drawing.Size(600, 39);
-            this.userAddyTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.userAddyTextBox_KeyUp);
-            this.userAddyTextBox.Click += new System.EventHandler(this.userAddyTextBox_Click);
+            this.userAddyTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.userAddyTextBox_KeyPress);
             // 
             // userGoBtn
             // 
@@ -167,6 +166,7 @@
             // 
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(300, 40);
+            this.toolStripProgressBar1.Click += new System.EventHandler(this.toolStripProgressBar1_Click);
             // 
             // toolStripStatusLabel1
             // 

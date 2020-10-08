@@ -15,7 +15,7 @@ namespace WebBrowser.logic
         public static void addItemBookmark(BookmarkItem item)
         {  
             var adapter = new BookmarksTableAdapter();
-            adapter.Insert(item.Id, item.URL, item.Title);
+            adapter.Insert(item.URL, item.Title);
         }
 
         //Get bookmark items and return/display from DB
@@ -48,7 +48,7 @@ namespace WebBrowser.logic
 
                 if (confirm == bookmarkRemove)
                 {
-                    adapter.Delete(row.Id, row.URL, row.Title);
+                    adapter.Delete(row.Id);
                 }
             }
         }
@@ -60,7 +60,7 @@ namespace WebBrowser.logic
 
             foreach (var row in rows)
             {
-                adapter.Delete(row.Id, row.URL, row.Title);
+                adapter.Delete(row.Id);
             }
         }
 

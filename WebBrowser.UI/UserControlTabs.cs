@@ -111,6 +111,7 @@ namespace WebBrowser.UI
         }
 
         ////Toolstip Address textbox - added module 4 and 5
+        /*
         private void userAddyTextBox_Click(object sender, EventArgs e)
         {
             webBrowser1.Navigate(userAddyTextBox.Text.ToString());
@@ -125,6 +126,7 @@ namespace WebBrowser.UI
             timer1.Start();
             toolStripStatusLabel1.Text = "Loading";
         }
+        */
 
         //Toolstip Go button
         private void userGoBtn_Click(object sender, EventArgs e)
@@ -164,31 +166,6 @@ namespace WebBrowser.UI
             }
         }
 
-        //Text address bar - key Code event handler - mod 4
-        private void userAddyTextBox_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                string url = userAddyTextBox.Text;
-
-                if (Uri.IsWellFormedUriString(url, UriKind.RelativeOrAbsolute))
-                {
-                    userAddyTextBox.Text = url;
-                    userCtrlWebBrowser.Navigate(url);
-                    userCtrlWebBrowser.ScriptErrorsSuppressed = true;
-
-                    //links pushed 
-                    backLink.Push(url);
-                    fwdLink.Push(url);
-
-                    //Mod 6 - adding statuslabel for loading when pg loading
-                    timer1.Start();
-                    toolStripStatusLabel1.Text = "Loading";
-                    toolStripProgressBar1.Value = 0;
-                }
-            }
-        }
-
         //bookmark button - Module 5 - when clicked url and title of pg added to DB
         private void userBookmarkBtn_Click(object sender, EventArgs e)
         {
@@ -209,6 +186,35 @@ namespace WebBrowser.UI
             else
             {
                 this.toolStripProgressBar1.Value++;
+            }
+        }
+
+        private void toolStripProgressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userAddyTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                string url = userAddyTextBox.Text;
+
+                if (Uri.IsWellFormedUriString(url, UriKind.RelativeOrAbsolute))
+                {
+                    userAddyTextBox.Text = url;
+                    userCtrlWebBrowser.Navigate(url);
+                    userCtrlWebBrowser.ScriptErrorsSuppressed = true;
+
+                    //links pushed 
+                    backLink.Push(url);
+                    fwdLink.Push(url);
+
+                    //Mod 6 - adding statuslabel for loading when pg loading
+                    timer1.Start();
+                    toolStripStatusLabel1.Text = "Loading";
+                    toolStripProgressBar1.Value = 0;
+                }
             }
         }
     }
