@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -132,6 +133,35 @@ namespace WebBrowser.UI
         private void actualUserControl_Load(object sender, EventArgs e)
         {
 
+        }
+
+
+        //Save as HTML
+        private void saveAsHTMLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog saveFile = new SaveFileDialog())
+            {
+                saveFile.InitialDirectory = "c:\\";
+                saveFile.Filter = "html files (*.html)|*.html|All files (*.*)|*.*";
+                saveFile.FilterIndex = 1;
+                saveFile.RestoreDirectory = true;
+                saveFile.Title = "Save";
+                saveFile.ShowDialog();
+
+                if (saveFile.FileName !=" " )
+                {
+                    // Get the path of specified file
+                    FileStream filehere = (FileStream)saveFile.OpenFile();
+                    filehere.Close();
+                }
+            }
+        }
+        
+        //Print functionality
+        private void printPageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            
         }
     }
 }
