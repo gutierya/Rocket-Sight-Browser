@@ -25,7 +25,7 @@ namespace WebBrowser.UI
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This browser will be speedy, efficient and a great addition to your Computer!" +
-                "\n" + "Created by: Yamilet Gutierrez, ID#904104865");
+                "\n" + "Created by: Yamilet Gutierrez, ID#0000");
         }
 
         //Strip Menu item action
@@ -78,7 +78,7 @@ namespace WebBrowser.UI
         //File Tab - new tab opens when clicked - mod4/5
         private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TabPage myTab = new TabPage("Click for new tab!");
+            TabPage myTab = new TabPage("Tab");
             tabControl1.TabPages.Add(myTab);
 
             UserControl Web = new UserControlTabs();

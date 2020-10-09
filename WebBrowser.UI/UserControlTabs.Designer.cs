@@ -50,6 +50,7 @@
             // 
             // toolStripUserCtrl
             // 
+            this.toolStripUserCtrl.BackColor = System.Drawing.Color.RoyalBlue;
             this.toolStripUserCtrl.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.toolStripUserCtrl.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.userBackBtn,
@@ -107,6 +108,7 @@
             // 
             // userAddyTextBox
             // 
+            this.userAddyTextBox.BackColor = System.Drawing.Color.GhostWhite;
             this.userAddyTextBox.Name = "userAddyTextBox";
             this.userAddyTextBox.Size = new System.Drawing.Size(600, 39);
             this.userAddyTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.userAddyTextBox_KeyPress);
@@ -152,6 +154,7 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.BackColor = System.Drawing.Color.RoyalBlue;
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripProgressBar1,
@@ -164,6 +167,7 @@
             // 
             // toolStripProgressBar1
             // 
+            this.toolStripProgressBar1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(300, 40);
             this.toolStripProgressBar1.Click += new System.EventHandler(this.toolStripProgressBar1_Click);
@@ -171,6 +175,7 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.AutoSize = false;
+            this.toolStripStatusLabel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.toolStripStatusLabel1.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
             | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
             | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
