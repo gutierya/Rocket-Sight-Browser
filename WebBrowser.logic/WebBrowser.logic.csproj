@@ -43,11 +43,6 @@
   <ItemGroup>
     <Compile Include="BookmarkItem.cs" />
     <Compile Include="BookmarkManager.cs" />
-    <Compile Include="HistoryBookmarkDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HistoryBookmarkDBDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="HistoryItem.cs" />
     <Compile Include="HistoryManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,17 +60,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="HistoryBookmarkDBDataSet.xsc">
-      <DependentUpon>HistoryBookmarkDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="HistoryBookmarkDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HistoryBookmarkDBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HistoryBookmarkDBDataSet.xss">
-      <DependentUpon>HistoryBookmarkDBDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

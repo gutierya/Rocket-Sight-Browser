@@ -149,12 +149,12 @@ namespace WebBrowser.UI
         //Webbrowser usercontrol - mod 5 - after load, add to history table
         private void webBrowser2_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-            if (webBrowser1.Url.AbsoluteUri == e.Url.AbsoluteUri)
-            {
+            //if (webBrowser1.Url.AbsoluteUri == e.Url.AbsoluteUri)
+            //{
                 var item = new HistoryItem();
                 item.URL = userAddyTextBox.Text;
                 item.Title = webBrowser1.DocumentTitle;
-                item.Date = DateTime.Now.ToString("mm/dd/yyyy HH:mm:ss");
+                item.Date = DateTime.Now;
 
                 //using history manager to add new history item to db
                 HistoryManager.AddItemHistory(item);
@@ -163,7 +163,7 @@ namespace WebBrowser.UI
                 toolStripStatusLabel1.Text = "Done";
                 timer1.Stop();
                 toolStripProgressBar1.Value = 100;
-            }
+           // }
         }
 
         //bookmark button - Module 5 - when clicked url and title of pg added to DB

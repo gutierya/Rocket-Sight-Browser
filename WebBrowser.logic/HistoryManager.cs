@@ -52,7 +52,7 @@ namespace WebBrowser.logic
 
             foreach (var row in rows)
             {
-                adapter.Delete(row.Id, row.URL, row.Title, row.Date);
+                adapter.Delete(row.Id,row.Date);
             }
         }
 
@@ -68,7 +68,8 @@ namespace WebBrowser.logic
 
                 if (confirm == historyRemove)
                 {
-                    adapter.Delete(row.Id, row.URL, row.Title, row.Date);
+                    adapter.Delete(row.Id,row.Date);
+                    
                 }
             }
         }

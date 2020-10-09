@@ -91,7 +91,7 @@ namespace WebBrowser.UI
         private void closeCurrentTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tabControl1.TabPages.Remove(tabControl1.SelectedTab);
-            tabControl1.TabPages.Clear();
+            //tabControl1.TabPages.Clear();
         }
    
         //Adding menu item functionality

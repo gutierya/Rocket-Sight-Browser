@@ -36,7 +36,7 @@ namespace WebBrowser.UI
         {
             var items = HistoryManager.GetHistoryItems();
 
-            //listBoxHist.Items.Clear();
+            listBoxHist.Items.Clear();
 
             foreach (var item in items)
             {

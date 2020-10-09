@@ -13,6 +13,6 @@ namespace WebBrowser.logic
         public int Id { get; set; }
         public string URL { get; set; }
         public string Title { get; set; }
-        public string Date { get; set; } //tried changing from 'DateTime' to string
+        public DateTime Date { get; set; } //tried changing from 'DateTime' to string
     }
 }
