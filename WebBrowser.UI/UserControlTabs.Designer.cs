@@ -73,7 +73,7 @@
             this.userBackBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.userBackBtn.Name = "userBackBtn";
             this.userBackBtn.Size = new System.Drawing.Size(36, 36);
-            this.userBackBtn.Text = "toolStripButton1";
+            this.userBackBtn.Text = "Go back";
             this.userBackBtn.Click += new System.EventHandler(this.userBackBtn_Click);
             // 
             // userFwdBtn
@@ -83,7 +83,7 @@
             this.userFwdBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.userFwdBtn.Name = "userFwdBtn";
             this.userFwdBtn.Size = new System.Drawing.Size(36, 36);
-            this.userFwdBtn.Text = "toolStripButton2";
+            this.userFwdBtn.Text = "Go Forward";
             this.userFwdBtn.Click += new System.EventHandler(this.userFwdBtn_Click);
             // 
             // userRefreshBtn
@@ -93,7 +93,7 @@
             this.userRefreshBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.userRefreshBtn.Name = "userRefreshBtn";
             this.userRefreshBtn.Size = new System.Drawing.Size(36, 36);
-            this.userRefreshBtn.Text = "toolStripButton3";
+            this.userRefreshBtn.Text = "Refresh";
             this.userRefreshBtn.Click += new System.EventHandler(this.userRefreshBtn_Click);
             // 
             // userHomeBtn
@@ -103,7 +103,7 @@
             this.userHomeBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.userHomeBtn.Name = "userHomeBtn";
             this.userHomeBtn.Size = new System.Drawing.Size(36, 36);
-            this.userHomeBtn.Text = "toolStripButton1";
+            this.userHomeBtn.Text = "Go to Homepg";
             this.userHomeBtn.Click += new System.EventHandler(this.userHomeBtn_Click);
             // 
             // userAddyTextBox
@@ -120,7 +120,7 @@
             this.userGoBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.userGoBtn.Name = "userGoBtn";
             this.userGoBtn.Size = new System.Drawing.Size(36, 36);
-            this.userGoBtn.Text = "toolStripButton1";
+            this.userGoBtn.Text = "Go to Site";
             this.userGoBtn.Click += new System.EventHandler(this.userGoBtn_Click);
             // 
             // userBookmarkBtn
@@ -130,7 +130,7 @@
             this.userBookmarkBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.userBookmarkBtn.Name = "userBookmarkBtn";
             this.userBookmarkBtn.Size = new System.Drawing.Size(36, 36);
-            this.userBookmarkBtn.Text = "toolStripButton1";
+            this.userBookmarkBtn.Text = "Add to Bookmarks";
             this.userBookmarkBtn.Click += new System.EventHandler(this.userBookmarkBtn_Click);
             // 
             // webBrowser1
