@@ -72,11 +72,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HistoryBookmarkDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="HistoryBookmarkDB.mdf" />
     <Content Include="HistoryBookmarkDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>HistoryBookmarkDB.mdf</DependentUpon>
     </Content>
   </ItemGroup>

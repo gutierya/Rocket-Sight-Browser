@@ -26,6 +26,7 @@ namespace WebBrowser.UI
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This browser will be speedy, efficient and a great addition to your Computer!" +
+                "\n" + "Web Browsner name: Rocket Sight Browser" +
                 "\n" + "Created by: Yamilet Gutierrez, ID#0000");
         }
 
