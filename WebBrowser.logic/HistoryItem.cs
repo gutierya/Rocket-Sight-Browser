@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using WebBrowser.Data;
 
-
 namespace WebBrowser.logic
 {
     public class HistoryItem

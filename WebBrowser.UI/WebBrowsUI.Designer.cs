@@ -105,7 +105,6 @@
             this.printPageToolStripMenuItem.Name = "printPageToolStripMenuItem";
             this.printPageToolStripMenuItem.Size = new System.Drawing.Size(316, 38);
             this.printPageToolStripMenuItem.Text = "Print Page";
-            this.printPageToolStripMenuItem.Click += new System.EventHandler(this.printPageToolStripMenuItem_Click);
             // 
             // exitWebBrowserToolStripMenuItem
             // 
@@ -172,7 +171,6 @@
             this.tabPage1.Size = new System.Drawing.Size(2008, 884);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Tab+";
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // actualUserControl
             // 
@@ -181,7 +179,6 @@
             this.actualUserControl.Name = "actualUserControl";
             this.actualUserControl.Size = new System.Drawing.Size(2005, 878);
             this.actualUserControl.TabIndex = 0;
-            this.actualUserControl.Load += new System.EventHandler(this.actualUserControl_Load);
             // 
             // tabControl1
             // 

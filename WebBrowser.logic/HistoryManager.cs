@@ -9,6 +9,7 @@ namespace WebBrowser.logic
 {
     public class HistoryManager
     {
+        //Add history item
         public static void AddItemHistory(HistoryItem item)
         {
             try
@@ -21,6 +22,7 @@ namespace WebBrowser.logic
             }
         }
 
+        //Get history items and return/display from DB
         public static List<HistoryItem> GetHistoryItems()
         {
             var adapter = new HistoryTableAdapter();
@@ -38,13 +40,7 @@ namespace WebBrowser.logic
             return results;
         }
 
-        /*public object GetHistoryItems()
-        {
-            throw new NotImplementedException();
-        }
-        */
-
-        //clear history
+        //Clear history
         public static void ClearHistory()
         {
             var adapter = new HistoryTableAdapter();
@@ -56,7 +52,7 @@ namespace WebBrowser.logic
             }
         }
 
-        //remove history
+        //Remove history
         public static void RemoveHistoryItem(string historyRemove)
         {
             var adapter = new HistoryTableAdapter();

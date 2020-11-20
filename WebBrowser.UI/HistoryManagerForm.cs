@@ -21,7 +21,7 @@ namespace WebBrowser.UI
         private void HistoryManagerForm_Load(object sender, EventArgs e)
         {
             //get all history items
-            var items = HistoryManager.GetHistoryItems(); //debug why HManager inaccessible now
+            var items = HistoryManager.GetHistoryItems(); 
             listBoxHist.Items.Clear();
 
             // Display in listbox
@@ -31,7 +31,7 @@ namespace WebBrowser.UI
             }
         }
 
-        //search button history
+        //Search button history
         private void button1_Click(object sender, EventArgs e)
         {
             var items = HistoryManager.GetHistoryItems();
@@ -47,14 +47,14 @@ namespace WebBrowser.UI
             }
         }
 
-        //clear history button
+        //Clear history button
         private void button2_Click(object sender, EventArgs e)
         {
             HistoryManager.ClearHistory();
             listBoxHist.Items.Clear();
         }
 
-        //delete history button
+        //Delete history button
         private void button3_Click(object sender, EventArgs e)
         {
             /* removing old method for better call

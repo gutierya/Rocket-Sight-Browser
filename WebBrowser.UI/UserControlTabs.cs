@@ -22,69 +22,69 @@ namespace WebBrowser.UI
             InitializeComponent();
         }
 
-        //Toolstip Home button - functionality to be added - was module 3
+        //Toolstrip Home button 
         private void userHomeBtn_Click(object sender, EventArgs e)
         {
-            string url = "www.auburn.edu";
+            string url = "github.com/gutierya";
             userCtrlWebBrowser.Navigate(url);
             userCtrlWebBrowser.ScriptErrorsSuppressed = true;
         }
 
-        //module 4
+        //Stack of strings - backinks and forwardlinks 
         Stack<string> backLink = new Stack<string>();
         Stack<string> fwdLink = new Stack<string>();
 
-        //module 5
+        //Getter/Setters - Site, Title, Date
         public string URL { get; private set; }
         public object Title { get; private set; }
         public DateTime Date { get; private set; }
 
 
-        //Toolstip back button - mod 4
+        //Back button functionality
         private void userBackBtn_Click(object sender, EventArgs e)
         {
             string url = userAddyTextBox.Text;
-            //pushing current link to top of fwd stack
+            //Pushing current link to top of fwd stack
             fwdLink.Push(url);
 
-            //navigate url
+            //URL Navigation
             string backNextUrl = backLink.Pop();
             userCtrlWebBrowser.Navigate(backNextUrl);
             userAddyTextBox.Text = backNextUrl;
 
-            //Mod 6 - adding statuslabel for loading when pg loading
+            //Status label for when pg loading
             timer1.Start();
             toolStripStatusLabel1.Text = "Loading";
             toolStripProgressBar1.Value = 0;
         }
 
-        //BackLinks Field - stack of strings - mod 4
+        //BackLinks Field 
         public void backLinkField()
         {
             string url = userAddyTextBox.Text;
             backLink.Push(url);
         }
 
-        //Toolstip forward button - mod 4
+        //Forward button functionality
         private void userFwdBtn_Click(object sender, EventArgs e)
         {
 
-            //pushing current link to top of back stack
+            //Pushing current link to top of back stack
             string url = userAddyTextBox.Text;
             backLink.Push(url);
             string fwdNextUrl = fwdLink.Pop();
 
-            //navigate url
+            //URL Navigation
             userCtrlWebBrowser.Navigate(fwdNextUrl);
             userAddyTextBox.Text = fwdNextUrl;
 
-            //Mod 6 - adding statuslabel for loading when pg loading
+            //Status label for when pg loading
             timer1.Start();
             toolStripStatusLabel1.Text = "Loading";
             toolStripProgressBar1.Value = 0;
         }
 
-        //FwdLinks Field - stack of strings - mod 4
+        //Forward Links Field 
         public void fwdLinkField()
         {
             while (userAddyTextBox.Text != null)
@@ -93,42 +93,18 @@ namespace WebBrowser.UI
             }
         }
 
-        //Toolstip refresh button - mod 3/4
+        //Toolstrip refresh button 
         private void userRefreshBtn_Click(object sender, EventArgs e)
         {
             userCtrlWebBrowser.Refresh();
 
-            //Mod 6 - adding statuslabel for loading when pg loading
+            //Status label for pg refresh
             timer1.Start();
             toolStripStatusLabel1.Text = "Loading";
             toolStripProgressBar1.Value = 0;
         }
 
-        //do not delete - creates UI for usercontrol
-        private void UserControlTabs_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        ////Toolstip Address textbox - added module 4 and 5
-        /*
-        private void userAddyTextBox_Click(object sender, EventArgs e)
-        {
-            webBrowser1.Navigate(userAddyTextBox.Text.ToString());
-
-            HistoryItem item = new HistoryItem(); //
-
-            URL = userAddyTextBox.Text.ToString();
-            Title = userAddyTextBox.Text.ToString();
-            Date = DateTime.Now;
-
-            //Mod 6 - adding statuslabel for loading when pg loading
-            timer1.Start();
-            toolStripStatusLabel1.Text = "Loading";
-        }
-        */
-
-        //Toolstip Go button
+        //Toolstrip Go button
         private void userGoBtn_Click(object sender, EventArgs e)
         {
             webBrowser1.Navigate(userAddyTextBox.Text.ToString());
@@ -140,40 +116,56 @@ namespace WebBrowser.UI
             backLink.Push(url);
             fwdLink.Push(url);
 
-            //Mod 6 - adding statuslabel for loading when pg loading
+            //Status label for pg navigation
             timer1.Start();
             toolStripStatusLabel1.Text = "Loading";
             toolStripProgressBar1.Value = 0; 
         }
 
-        //Webbrowser usercontrol - mod 5 - after load, add to history table
-        private void webBrowser2_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        //Webbrowser usercontrol - after load, add to history table
+        private void webBrowser2_Completed(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-            //if (webBrowser1.Url.AbsoluteUri == e.Url.AbsoluteUri)
-            //{
                 var item = new HistoryItem();
                 item.URL = userAddyTextBox.Text;
                 item.Title = webBrowser1.DocumentTitle;
                 item.Date = DateTime.Now;
 
-                //using history manager to add new history item to db
+                //Adding new history item to db
                 HistoryManager.AddItemHistory(item);
 
-                //Mod 6 - adding statuslabel
+                //Statuslabel
                 toolStripStatusLabel1.Text = "Done";
                 timer1.Stop();
                 toolStripProgressBar1.Value = 100;
-           // }
         }
 
-        //bookmark button - Module 5 - when clicked url and title of pg added to DB
+        //Bookmark button - title and pg URL added to db
         private void userBookmarkBtn_Click(object sender, EventArgs e)
         {
             var item = new BookmarkItem(); 
+            
             item.URL = userAddyTextBox.Text;
             item.Title = webBrowser1.DocumentTitle;
+            
+            if (!itemExists(URL))
+            {
+                BookmarkManager.addItemBookmark(item);
+            }
+        }
 
-            BookmarkManager.addItemBookmark(item);
+        //If bookmark exists in DB - alert user
+        private bool itemExists(string url)
+        {
+            var test = BookmarkManager.GetBookmarkItems();
+            foreach(var i in test)
+            {
+                if (i.URL.Equals(url))
+                {
+                    MessageBox.Show("You've already Bookmarked this site");
+                    return true;
+                }
+            }
+            return false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -187,11 +179,6 @@ namespace WebBrowser.UI
             {
                 this.toolStripProgressBar1.Value++;
             }
-        }
-
-        private void toolStripProgressBar1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void userAddyTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -210,7 +197,7 @@ namespace WebBrowser.UI
                     backLink.Push(url);
                     fwdLink.Push(url);
 
-                    //Mod 6 - adding statuslabel for loading when pg loading
+                    //Status label for keypress 
                     timer1.Start();
                     toolStripStatusLabel1.Text = "Loading";
                     toolStripProgressBar1.Value = 0;

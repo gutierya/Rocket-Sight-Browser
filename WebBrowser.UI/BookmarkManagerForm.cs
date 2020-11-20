@@ -20,7 +20,7 @@ namespace WebBrowser.UI
 
         private void BookmarkManagerForm_Load(object sender, EventArgs e)
         {
-            //get all bookmark items
+            //Get all bookmark items
             var items = BookmarkManager.GetBookmarkItems();
             listBox1.Items.Clear(); //listbox of bookmark form
             
@@ -31,7 +31,7 @@ namespace WebBrowser.UI
             }
         }
 
-        //search button
+        //Search button
         private void button1_Click(object sender, EventArgs e)
         {
             var items = HistoryManager.GetHistoryItems();
@@ -47,14 +47,14 @@ namespace WebBrowser.UI
             }
         }
 
-        //clear results button
+        //Clear results button
         private void button2_Click(object sender, EventArgs e)
         {
             BookmarkManager.ClearBookMarkItem();
             listBox1.Items.Clear();
         }
 
-        //delete bookmark button
+        //Delete bookmark button
         private void button3_Click(object sender, EventArgs e)
         {
             /* removing old method for better call

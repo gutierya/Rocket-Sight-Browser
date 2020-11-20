@@ -150,7 +150,6 @@
             this.userCtrlWebBrowser.Name = "userCtrlWebBrowser";
             this.userCtrlWebBrowser.Size = new System.Drawing.Size(1708, 563);
             this.userCtrlWebBrowser.TabIndex = 2;
-            this.userCtrlWebBrowser.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser2_DocumentCompleted);
             // 
             // statusStrip1
             // 
@@ -170,7 +169,6 @@
             this.toolStripProgressBar1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(300, 40);
-            this.toolStripProgressBar1.Click += new System.EventHandler(this.toolStripProgressBar1_Click);
             // 
             // toolStripStatusLabel1
             // 
@@ -196,7 +194,6 @@
             this.Controls.Add(this.toolStripUserCtrl);
             this.Name = "UserControlTabs";
             this.Size = new System.Drawing.Size(1708, 602);
-            this.Load += new System.EventHandler(this.UserControlTabs_Load);
             this.toolStripUserCtrl.ResumeLayout(false);
             this.toolStripUserCtrl.PerformLayout();
             this.statusStrip1.ResumeLayout(false);

@@ -37,6 +37,7 @@ namespace WebBrowser.logic
             return results;
         }
 
+        //Remove bookmark item
         public static void RemoveBookMarkItem(string bookmarkRemove)
         {
             var adapter = new BookmarksTableAdapter();
@@ -53,6 +54,7 @@ namespace WebBrowser.logic
             }
         }
 
+        //Clear bookmark item
         public static void ClearBookMarkItem()
         {
             var adapter = new BookmarksTableAdapter();

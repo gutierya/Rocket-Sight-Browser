@@ -70,6 +70,7 @@
             this.searchHistoryTextBox.Name = "searchHistoryTextBox";
             this.searchHistoryTextBox.Size = new System.Drawing.Size(400, 31);
             this.searchHistoryTextBox.TabIndex = 3;
+
             // 
             // button1
             // 
