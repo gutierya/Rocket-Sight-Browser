@@ -53,9 +53,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WebBrowser.Data\WebBrowser.Data.csproj">
+    <ProjectReference Include="..\WebBrowser.Data\RocketSight.Data.csproj">
       <Project>{1b5850c0-98c2-4406-9aac-078ca9aa9c10}</Project>
-      <Name>WebBrowser.Data</Name>
+      <Name>RocketSight.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

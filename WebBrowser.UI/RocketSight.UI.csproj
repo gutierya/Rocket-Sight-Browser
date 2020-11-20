@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\YamWins\Documents\</PublishUrl>
+    <PublishUrl>C:\Users\YamWins\Desktop\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationRevision>10</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -137,9 +137,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WebBrowser.logic\WebBrowser.Logic.csproj">
+    <ProjectReference Include="..\WebBrowser.logic\RocketSight.Logic.csproj">
       <Project>{d59a2639-a652-40cd-a34f-e0a1e41c47e1}</Project>
-      <Name>WebBrowser.Logic</Name>
+      <Name>RocketSight.Logic</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
