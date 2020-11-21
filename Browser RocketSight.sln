@@ -15,6 +15,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketSight.Logic", "WebBro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketSight.Data", "WebBrowser.Data\RocketSight.Data.csproj", "{1B5850C0-98C2-4406-9AAC-078CA9AA9C10}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F4995440-A24A-4C60-A5CA-9FDA37DAFD57}"
+	ProjectSection(SolutionItems) = preProject
+		..\Application Setup Files.zip = ..\Application Setup Files.zip
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
